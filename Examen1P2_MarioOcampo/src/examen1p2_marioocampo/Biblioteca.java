@@ -4,6 +4,8 @@
  */
 package examen1p2_marioocampo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author mario
@@ -26,21 +28,66 @@ public class Biblioteca extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        UserAdmin = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        password = new javax.swing.JTextField();
+        loginAdmin = new javax.swing.JButton();
+        ingresarUsuario = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Administrador Log In");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 320, 70));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setText("User Adiministrador:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 140, 50));
+        jPanel1.add(UserAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 280, 30));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setText("Password: ");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 80, 20));
+        jPanel1.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, 280, 30));
+
+        loginAdmin.setText("Log in Admin");
+        loginAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginAdminMouseClicked(evt);
+            }
+        });
+        jPanel1.add(loginAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 130, 30));
+
+        ingresarUsuario.setText("Entrar como usuario");
+        jPanel1.add(ingresarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 340, 150, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 416, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void loginAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginAdminMouseClicked
+        if (password.getText().equals("321lib")) {
+            login.add(new admin(UserAdmin.getText(),password.getText()));
+        }else{
+            javax.swing.JOptionPane.showInputDialog("Password Incorrecta");
+        }
+    }//GEN-LAST:event_loginAdminMouseClicked
 
     /**
      * @param args the command line arguments
@@ -78,5 +125,17 @@ public class Biblioteca extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField UserAdmin;
+    private javax.swing.JButton ingresarUsuario;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton loginAdmin;
+    private javax.swing.JTextField password;
     // End of variables declaration//GEN-END:variables
+
+    ArrayList <Object> login = new ArrayList();
+    
+    
 }
