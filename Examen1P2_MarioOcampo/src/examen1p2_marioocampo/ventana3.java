@@ -60,7 +60,7 @@ public class ventana3 extends javax.swing.JFrame {
 
         jLabel2.setText("Tipo: ");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Libros de Texto Libros de Referencias", "Libro de Ficcion", "Libro de No Ficcion" }));
 
         jLabel3.setText("Libro:");
 
@@ -136,7 +136,7 @@ public class ventana3 extends javax.swing.JFrame {
 
         jLabel5.setText("Tipo: ");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Libros de Texto Libros de Referencias", "Libro de Ficcion", "Libro de No Ficcion" }));
 
         jLabel6.setText("Libro:");
 

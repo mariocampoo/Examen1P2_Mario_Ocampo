@@ -5,8 +5,8 @@ public class LibroNoFiccion extends Libro{
     public LibroNoFiccion() {
     }
 
-    public LibroNoFiccion(String tipo, String titulo, String autor, int precio, int edicion) {
-        super(titulo, autor, precio, edicion);
+    public LibroNoFiccion(String tipo, String titulo, String autor, int precio) {
+        super(titulo, autor, precio);
         this.tipo = tipo;
     }
 
@@ -42,13 +42,6 @@ public class LibroNoFiccion extends Libro{
         this.precio = precio;
     }
 
-    public int getEdicion() {
-        return edicion;
-    }
-
-    public void setEdicion(int edicion) {
-        this.edicion = edicion;
-    }
 
     @Override
     public String toString() {
