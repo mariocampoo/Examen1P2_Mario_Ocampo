@@ -1,11 +1,11 @@
 package examen1p2_marioocampo;
-public class LibroReferencia extends Libro{
+public class LibroFiccion extends Libro{
     protected String tipo;
 
-    public LibroReferencia() {
+    public LibroFiccion() {
     }
 
-    public LibroReferencia(String tipo, String titulo, String autor, int precio, int edicion) {
+    public LibroFiccion(String tipo, String titulo, String autor, int precio, int edicion) {
         super(titulo, autor, precio, edicion);
         this.tipo = tipo;
     }
@@ -52,10 +52,10 @@ public class LibroReferencia extends Libro{
 
     @Override
     public String toString() {
-        return "LibroReferencia" + "\n"
+        return "LibroFiccion" + "\n"
                 + " Tipo = " + tipo;
     }
-    
+
     
     
 }

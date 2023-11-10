@@ -65,7 +65,12 @@ public class Biblioteca extends javax.swing.JFrame {
         jPanel1.add(loginAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 130, 30));
 
         ingresarUsuario.setText("Entrar como usuario");
-        jPanel1.add(ingresarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 340, 150, 30));
+        ingresarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ingresarUsuarioMouseClicked(evt);
+            }
+        });
+        jPanel1.add(ingresarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 350, 150, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -83,11 +88,28 @@ public class Biblioteca extends javax.swing.JFrame {
 
     private void loginAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginAdminMouseClicked
         if (password.getText().equals("321lib")) {
-            login.add(new admin(UserAdmin.getText(),password.getText()));
-        }else{
+            login.add(new admin(UserAdmin.getText(), password.getText()));
+            ventana2 vnt2 = new ventana2();
+
+            vnt2.setVisible(true);
+
+            this.dispose();
+
+        } else {
             javax.swing.JOptionPane.showInputDialog("Password Incorrecta");
         }
+
+
     }//GEN-LAST:event_loginAdminMouseClicked
+
+    private void ingresarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ingresarUsuarioMouseClicked
+        ventana3 vnt3 = new ventana3();
+
+        vnt3.setVisible(true);
+
+        this.dispose();
+
+    }//GEN-LAST:event_ingresarUsuarioMouseClicked
 
     /**
      * @param args the command line arguments
@@ -135,7 +157,6 @@ public class Biblioteca extends javax.swing.JFrame {
     private javax.swing.JTextField password;
     // End of variables declaration//GEN-END:variables
 
-    ArrayList <Object> login = new ArrayList();
-    
-    
+    ArrayList<Object> login = new ArrayList();
+
 }
