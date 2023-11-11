@@ -1,22 +1,16 @@
 package examen1p2_marioocampo;
 public class LibroReferencia extends Libro{
-    protected String tipo;
+
 
     public LibroReferencia() {
     }
 
-    public LibroReferencia(String tipo, String titulo, String autor, int precio) {
+    public LibroReferencia(String titulo, String autor, int precio) {
         super(titulo, autor, precio);
-        this.tipo = tipo;
     }
 
-    public String getTipo() {
-        return tipo;
-    }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
+
 
     public String getTitulo() {
         return titulo;
@@ -43,11 +37,7 @@ public class LibroReferencia extends Libro{
     }
 
 
-    @Override
-    public String toString() {
-        return "LibroReferencia" + "\n"
-                + " Tipo = " + tipo;
-    }
+
     
     
     

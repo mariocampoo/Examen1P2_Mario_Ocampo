@@ -1,6 +1,5 @@
 package examen1p2_marioocampo;
 
-import java.util.ArrayList;
 
 public class LibrosTexto extends Libro{
     
@@ -10,7 +9,7 @@ public class LibrosTexto extends Libro{
     public LibrosTexto() {
     }
 
-    public LibrosTexto(int curso, String facultad, String titulo, String autor, int precio, int edicion) {
+    public LibrosTexto(int curso, String facultad, String titulo, String autor, int precio) {
         super(titulo, autor, precio);
         this.curso = curso;
         this.facultad = facultad;
@@ -27,6 +26,9 @@ public class LibrosTexto extends Libro{
     @Override
     public String toString() {
         return "LibrosTexto" + "\n"
+                + " Titulo = " + titulo + "\n"
+                + " Autor = " + autor + "\n"
+                + " Precio = " + precio + "\n"
                 + " Curso = " + curso + "\n"
                 + " Facultad = " + facultad;
     }

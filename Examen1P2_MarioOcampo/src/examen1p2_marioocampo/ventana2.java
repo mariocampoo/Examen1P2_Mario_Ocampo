@@ -46,41 +46,42 @@ public class ventana2 extends javax.swing.JFrame {
         publicarL1 = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        tipoAñadir = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        t1 = new javax.swing.JComboBox<>();
+        pubL2 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        tp2 = new javax.swing.JComboBox<>();
         jLabel15 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
-        jComboBox7 = new javax.swing.JComboBox<>();
+        tp3 = new javax.swing.JComboBox<>();
         jPanel7 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox<>();
+        list = new javax.swing.JComboBox<>();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
+        textA1 = new javax.swing.JTextArea();
+        mostrar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        bus = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
+        actualizar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
+        jTextField1 = new javax.swing.JTextField();
         jPanel9 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        elimtipo = new javax.swing.JComboBox<>();
         jLabel14 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jButton4 = new javax.swing.JButton();
+        eliminarLibro = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        nomeli = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -88,11 +89,11 @@ public class ventana2 extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 6, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGap(0, 499, Short.MAX_VALUE)
         );
 
         jLabel3.setText("Titulo:");
@@ -156,14 +157,19 @@ public class ventana2 extends javax.swing.JFrame {
 
         jLabel9.setText("Tipo:");
 
-        tipoAñadir.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Diccionario", "Enciclopedia", "Manual Tecnico", "Tesauro" }));
-        tipoAñadir.addActionListener(new java.awt.event.ActionListener() {
+        t1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Diccionario", "Enciclopedia", "Manual Tecnico", "Tesauro" }));
+        t1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tipoAñadirActionPerformed(evt);
+                t1ActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Publicar Libro");
+        pubL2.setText("Publicar Libro");
+        pubL2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pubL2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -173,11 +179,11 @@ public class ventana2 extends javax.swing.JFrame {
                 .addGap(192, 192, 192)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tipoAñadir, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(t1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(247, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(pubL2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
@@ -186,15 +192,15 @@ public class ventana2 extends javax.swing.JFrame {
                 .addGap(92, 92, 92)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(tipoAñadir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
+                    .addComponent(t1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addComponent(pubL2)
+                .addGap(17, 17, 17))
         );
 
         jTabbedPane1.addTab("Libro de Referencias", jPanel8);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Novela", "SciFi", "Misterio", "Aventura." }));
+        tp2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Novela", "SciFi", "Misterio", "Aventura." }));
 
         jLabel15.setText("Tipo: ");
 
@@ -206,7 +212,7 @@ public class ventana2 extends javax.swing.JFrame {
                 .addGap(225, 225, 225)
                 .addComponent(jLabel15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tp2, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -214,7 +220,7 @@ public class ventana2 extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(78, 78, 78)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tp2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -223,7 +229,7 @@ public class ventana2 extends javax.swing.JFrame {
 
         jLabel16.setText("Tipo: ");
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ensayo", "Biografía", "Autobiografía", "Revista Científica." }));
+        tp3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ensayo", "Biografía", "Autobiografía", "Revista Científica." }));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -233,8 +239,8 @@ public class ventana2 extends javax.swing.JFrame {
                 .addGap(212, 212, 212)
                 .addComponent(jLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(217, Short.MAX_VALUE))
+                .addComponent(tp3, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(225, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -242,7 +248,7 @@ public class ventana2 extends javax.swing.JFrame {
                 .addGap(71, 71, 71)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
-                    .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tp3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(116, Short.MAX_VALUE))
         );
 
@@ -298,26 +304,51 @@ public class ventana2 extends javax.swing.JFrame {
 
         jLabel1.setText("Tipo: ");
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Libro de Texto", "Libro de Referencias", "Libro de Ficcion", "Libro de No Ficcion" }));
+        list.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Libro de Texto", "Libro de Referencias", "Libro de Ficcion", "Libro de No Ficcion" }));
+        list.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listActionPerformed(evt);
+            }
+        });
 
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane3.setViewportView(jTextArea3);
+        textA1.setBackground(new java.awt.Color(51, 51, 51));
+        textA1.setColumns(20);
+        textA1.setForeground(new java.awt.Color(255, 255, 255));
+        textA1.setRows(5);
+        textA1.setText("No pude hacer que se los libros se imprimieran aqui por eso se imprimen en la consola");
+        textA1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                textA1MouseClicked(evt);
+            }
+        });
+        jScrollPane3.setViewportView(textA1);
+
+        mostrar.setText("mostrar");
+        mostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mostrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap(94, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(69, 69, 69))
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(175, 175, 175)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(192, Short.MAX_VALUE))
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane3)
-                .addContainerGap())
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(175, 175, 175)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(list, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(318, 318, 318)
+                        .addComponent(mostrar)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -325,21 +356,21 @@ public class ventana2 extends javax.swing.JFrame {
                 .addGap(80, 80, 80)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(list, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(mostrar)
+                .addContainerGap(103, Short.MAX_VALUE))
         );
 
         jTabbedPane7.addTab("Listar Libro", jPanel7);
 
         jLabel6.setText("Tipo: ");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Libros de Texto Libros de Referencias", "Libro de Ficcion", "Libro de No Ficcion" }));
+        bus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Libros de Texto Libros de Referencias", "Libro de Ficcion", "Libro de No Ficcion" }));
 
         jLabel7.setText("Libro: ");
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel10.setText("Titulo:");
 
@@ -347,7 +378,12 @@ public class ventana2 extends javax.swing.JFrame {
 
         jLabel12.setText("Precio: ");
 
-        jButton3.setText("Editar Libro");
+        actualizar.setText("Editar Libro");
+        actualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                actualizarActionPerformed(evt);
+            }
+        });
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
@@ -363,11 +399,11 @@ public class ventana2 extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(bus, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jTextField1))
                     .addComponent(jScrollPane2))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
@@ -385,10 +421,10 @@ public class ventana2 extends javax.swing.JFrame {
                                 .addComponent(jLabel12)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jTextField6)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(14, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34))))
         );
         jPanel3Layout.setVerticalGroup(
@@ -397,12 +433,12 @@ public class ventana2 extends javax.swing.JFrame {
                 .addGap(44, 44, 44)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(bus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -417,22 +453,30 @@ public class ventana2 extends javax.swing.JFrame {
                             .addComponent(jLabel12)
                             .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(131, 131, 131)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         jTabbedPane7.addTab("Editar Libro", jPanel3);
 
         jLabel13.setText("Tipo: ");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Libros de Texto Libros de Referencias", "Libro de Ficcion", "Libro de No Ficcion" }));
+        elimtipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Libros de Texto", "Libros de Referencias", "Libro de Ficcion", "Libro de No Ficcion" }));
+        elimtipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                elimtipoActionPerformed(evt);
+            }
+        });
 
-        jLabel14.setText("Libro:");
+        jLabel14.setText("nombre: ");
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jButton4.setText("Eliminar Libro");
+        eliminarLibro.setText("Eliminar Libro");
+        eliminarLibro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarLibroActionPerformed(evt);
+            }
+        });
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -452,10 +496,10 @@ public class ventana2 extends javax.swing.JFrame {
                             .addComponent(jLabel13))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jComboBox4, 0, 321, Short.MAX_VALUE)
-                            .addComponent(jComboBox5, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(elimtipo, 0, 321, Short.MAX_VALUE)
+                            .addComponent(nomeli))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addComponent(eliminarLibro, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37))
         );
         jPanel9Layout.setVerticalGroup(
@@ -464,17 +508,17 @@ public class ventana2 extends javax.swing.JFrame {
                 .addGap(68, 68, 68)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(elimtipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nomeli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(52, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(eliminarLibro, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
         );
 
@@ -506,17 +550,106 @@ public class ventana2 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tipoAñadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tipoAñadirActionPerformed
+    private void t1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t1ActionPerformed
         
-    }//GEN-LAST:event_tipoAñadirActionPerformed
+    }//GEN-LAST:event_t1ActionPerformed
 
     private void publicarL1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_publicarL1MouseClicked
-        Ltexto.add(new LibrosTexto());
+        Ltexto.add(new LibrosTexto(Integer.parseInt(curso.getText()),facultad.getText(),titulo.getText(),autor.getText(),Integer.parseInt(precio.getText())));
+        
+        
+        
+        
     }//GEN-LAST:event_publicarL1MouseClicked
 
     private void publicarL1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_publicarL1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_publicarL1ActionPerformed
+
+    private void pubL2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pubL2ActionPerformed
+        Ltexto.add(new LibrosTexto(Integer.parseInt(curso.getText()),facultad.getText(),titulo.getText(),autor.getText(),Integer.parseInt(precio.getText())));
+        ref.add(new LibrosTexto(Integer.parseInt(curso.getText()),facultad.getText(),titulo.getText(),autor.getText(),Integer.parseInt(precio.getText())));
+        Object sel = t1.getSelectedItem();
+        ref.add(sel);
+        
+        fic.add(new LibrosTexto(Integer.parseInt(curso.getText()),facultad.getText(),titulo.getText(),autor.getText(),Integer.parseInt(precio.getText())));
+        Object sel2 = tp2.getSelectedItem();
+        fic.add(sel2);
+        
+        Nofic.add(new LibrosTexto(Integer.parseInt(curso.getText()),facultad.getText(),titulo.getText(),autor.getText(),Integer.parseInt(precio.getText())));
+        Object sel3 = tp3.getSelectedItem();
+        Nofic.add(sel3);
+    }//GEN-LAST:event_pubL2ActionPerformed
+
+    private void listActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listActionPerformed
+        
+    }//GEN-LAST:event_listActionPerformed
+
+    private void textA1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_textA1MouseClicked
+        
+    }//GEN-LAST:event_textA1MouseClicked
+
+    private void mostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarActionPerformed
+        if (list.getSelectedItem()== "Libro de Texto") {
+                System.out.println(Ltexto);
+        }
+        if (list.getSelectedItem()== "Libro de Referencia") {
+            System.out.println(ref);
+        }
+        if (list.getSelectedItem()=="Libro de ficcion") {
+            System.out.println(fic);    
+        }
+        if (list.getSelectedItem() == "Libro de no ficcion") {
+            System.out.println(Nofic);
+        }
+    }//GEN-LAST:event_mostrarActionPerformed
+
+    private void elimtipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_elimtipoActionPerformed
+        
+    }//GEN-LAST:event_elimtipoActionPerformed
+
+    private void eliminarLibroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarLibroActionPerformed
+        if (elimtipo.getSelectedItem() == "Libro de texto") {
+            for (Object object : Ltexto) {
+                if (Ltexto.contains(nomeli)) {
+                    Ltexto.remove(nomeli);
+                    
+                    System.out.println(Ltexto);
+                }
+            }
+        }
+        if (elimtipo.getSelectedItem() == "Libro de Referencia") {
+            for (Object object : ref) {
+                if (ref.contains(nomeli)) {
+                    ref.remove(nomeli);
+                    
+                    System.out.println(ref);
+                }
+            }
+        }
+        if (elimtipo.getSelectedItem() == "Libro de Ficcion") {
+            for (Object object : fic) {
+                if (fic.contains(nomeli)) {
+                    fic.remove(nomeli);
+                    
+                    System.out.println(fic);
+                }
+            }
+        }
+        if (elimtipo.getSelectedItem() == "Libro de no Ficcion") {
+            for (Object object : Nofic) {
+                if (Nofic.contains(nomeli)) {
+                    Nofic.remove(nomeli);
+                    
+                    System.out.println(Nofic);
+                }
+            }
+        }
+    }//GEN-LAST:event_eliminarLibroActionPerformed
+
+    private void actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarActionPerformed
+        
+    }//GEN-LAST:event_actualizarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -554,19 +687,13 @@ public class ventana2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton actualizar;
     private javax.swing.JTextField autor;
+    private javax.swing.JComboBox<String> bus;
     private javax.swing.JTextField curso;
+    private javax.swing.JButton eliminarLibro;
+    private javax.swing.JComboBox<String> elimtipo;
     private javax.swing.JTextField facultad;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -599,15 +726,25 @@ public class ventana2 extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane7;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JComboBox<String> list;
+    private javax.swing.JButton mostrar;
+    private javax.swing.JTextField nomeli;
     private javax.swing.JTextField precio;
+    private javax.swing.JButton pubL2;
     private javax.swing.JButton publicarL1;
-    private javax.swing.JComboBox<String> tipoAñadir;
+    private javax.swing.JComboBox<String> t1;
+    private javax.swing.JTextArea textA1;
     private javax.swing.JTextField titulo;
+    private javax.swing.JComboBox<String> tp2;
+    private javax.swing.JComboBox<String> tp3;
     // End of variables declaration//GEN-END:variables
 
     ArrayList Ltexto = new ArrayList();
+    ArrayList ref = new ArrayList();
+    ArrayList fic = new ArrayList();
+    ArrayList Nofic = new ArrayList();
 }
